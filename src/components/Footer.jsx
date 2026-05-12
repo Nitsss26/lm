@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import { Phone, Mail, MapPin, Facebook, Instagram, Youtube, Clock, ExternalLink } from 'lucide-react'
+import { Phone, Mail, MapPin, Facebook, Instagram, Youtube, ExternalLink } from 'lucide-react'
 
 const Footer = () => {
     const currentYear = new Date().getFullYear()
@@ -7,10 +7,10 @@ const Footer = () => {
     return (
         <footer className="bg-slate-900 text-slate-300">
             <div className="max-w-7xl mx-auto px-6 py-16">
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12">
 
                     {/* Brand Column */}
-                    <div className="space-y-6">
+                    <div className="lg:col-span-2 space-y-6">
                         <div className="flex items-center gap-3">
                             <div className="w-12 h-12 bg-white rounded-full p-1">
                                 <img src="/logo.png" alt="Logo" className="w-full h-full object-contain" />
@@ -19,7 +19,7 @@ const Footer = () => {
                                 <h3 className="text-white font-bold text-lg leading-tight">L.M. Educational<br />Academy</h3>
                             </div>
                         </div>
-                        <p className="text-sm leading-relaxed text-slate-400">
+                        <p className="text-sm leading-relaxed text-slate-400 max-w-sm">
                             Empowering students with knowledge, values, and skills for a bright future.
                             CBSE Affiliated Senior Secondary School.
                         </p>
@@ -53,6 +53,36 @@ const Footer = () => {
                         </ul>
                     </div>
 
+                    {/* Mandatory Disclosure */}
+                    <div>
+                        <h4 className="text-white font-bold mb-6">Mandatory Disclosure</h4>
+                        <ul className="space-y-3">
+                            {[
+                                { name: 'Fee Structure', file: 'Fee Structure.pdf' },
+                                { name: 'Academic Calendar', file: 'Academic Calendar.pdf' },
+                                { name: 'CBSE Affiliation', file: 'Affiliation.pdf' },
+                                { name: 'Fire Safety', file: 'fire noc.pdf' },
+                            ].map((doc) => (
+                                <li key={doc.name}>
+                                    <a 
+                                        href={`/documents/${doc.file}`} 
+                                        target="_blank" 
+                                        rel="noopener noreferrer"
+                                        className="text-sm hover:text-white transition-colors flex items-center gap-2 group"
+                                    >
+                                        <ExternalLink size={12} className="text-slate-600 group-hover:text-primary-500" />
+                                        {doc.name}
+                                    </a>
+                                </li>
+                            ))}
+                            <li>
+                                <Link to="/about#disclosure" className="text-sm text-primary-500 hover:text-primary-400 font-medium mt-2 inline-block">
+                                    View All Documents →
+                                </Link>
+                            </li>
+                        </ul>
+                    </div>
+
                     {/* Contact Info */}
                     <div>
                         <h4 className="text-white font-bold mb-6">Contact Us</h4>
@@ -63,43 +93,13 @@ const Footer = () => {
                             </li>
                             <li className="flex items-center gap-3 text-sm">
                                 <Phone className="text-primary-500 shrink-0" size={16} />
-                                <span>08859431431, 08859831831</span>
+                                <span>08859431431</span>
                             </li>
                             <li className="flex items-center gap-3 text-sm">
                                 <Mail className="text-primary-500 shrink-0" size={16} />
-                                <span>l.m.e.a.kakore@gmail.com</span>
-                            </li>
-                            <li className="flex items-center gap-3 text-sm">
-                                <Clock className="text-primary-500 shrink-0" size={16} />
-                                <span>Mon - Sat: 08:30 AM - 03:00 PM</span>
+                                <span className="truncate">l.m.e.a.kakore@gmail.com</span>
                             </li>
                         </ul>
-                    </div>
-
-                    {/* Affiliation */}
-                    <div className="bg-slate-800 rounded-2xl p-6 h-fit border border-slate-700">
-                        <h4 className="text-white font-bold mb-4 flex items-center gap-2">
-                            <span>CBSE Affiliated</span>
-                            <ExternalLink size={14} className="text-primary-400" />
-                        </h4>
-                        <div className="space-y-3 text-sm">
-                            <div className="flex justify-between border-b border-slate-700 pb-2">
-                                <span className="text-slate-400">Affiliation No.</span>
-                                <span className="font-mono text-white">2133750</span>
-                            </div>
-                            <div className="flex justify-between border-b border-slate-700 pb-2">
-                                <span className="text-slate-400">School Code</span>
-                                <span className="font-mono text-white">61447</span>
-                            </div>
-                            <div className="pt-2">
-                                <span className="block text-xs text-slate-500 uppercase tracking-wider mb-1">Streams</span>
-                                <div className="flex gap-2">
-                                    {['Science', 'Commerce', 'Arts'].map(tag => (
-                                        <span key={tag} className="bg-slate-700/50 px-2 py-1 rounded text-xs text-slate-300">{tag}</span>
-                                    ))}
-                                </div>
-                            </div>
-                        </div>
                     </div>
 
                 </div>
