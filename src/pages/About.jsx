@@ -13,10 +13,10 @@ const About = () => {
     ]
 
     const documents = [
-        { title: 'Academic Calendar 2024-25', file: 'Academic Calendar.pdf' },
+        { title: 'Academic Calendar 2026-27', file: 'Academic Calendar.pdf' },
         { title: 'CBSE Affiliation Letter', file: 'Affiliation.pdf' },
         { title: 'School Curriculum', file: 'Curriculum.pdf' },
-        { title: 'Fee Structure 2024-25', file: 'Fee Structure.pdf' },
+        { title: 'Fee Structure 2026-27', file: 'Fee Structure.pdf' },
         { title: 'School Management Committee (SMC)', file: 'SMC.pdf' },
         { title: 'State NOC', file: 'State NOC.pdf' },
         { title: 'UP State Recognition (Class 8th)', file: 'affiliation letter up state 8th class .pdf' },
