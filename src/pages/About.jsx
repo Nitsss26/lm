@@ -23,6 +23,10 @@ const About = () => {
         { title: 'CBSE Grant Letter', file: 'cbse Grant Letter.pdf' },
         { title: 'Fire Safety Certificate', file: 'fire noc.pdf' },
         { title: 'Society Registration', file: 'verma siksha samiti registration.pdf' },
+        { title: 'Building Safety Certificate', file: 'Bulding Safety Certificate.pdf' },
+        { title: 'Extension Letter', file: 'Extention Letter.pdf' },
+        { title: 'Parents Teacher Association', file: 'Parents Teacher Association.pdf' },
+        { title: 'Water Health and Sanitation Certificate', file: 'Water Health and Sanitation Certificate.pdf' },
     ]
 
     return (
