@@ -27,6 +27,7 @@ const About = () => {
         { title: 'Extension Letter', file: 'Extention Letter.pdf' },
         { title: 'Parents Teacher Association', file: 'Parents Teacher Association.pdf' },
         { title: 'Water Health and Sanitation Certificate', file: 'Water Health and Sanitation Certificate.pdf' },
+        { title: 'Self Certification 2025-26', file: 'Self Certification 2025-26.pdf' },
     ]
 
     return (

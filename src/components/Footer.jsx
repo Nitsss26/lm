@@ -62,6 +62,7 @@ const Footer = () => {
                                 { name: 'Academic Calendar', file: 'Academic Calendar.pdf' },
                                 { name: 'CBSE Affiliation', file: 'Affiliation.pdf' },
                                 { name: 'Fire Safety', file: 'fire noc.pdf' },
+                                { name: 'Self Certification', file: 'Self Certification 2025-26.pdf' },
                             ].map((doc) => (
                                 <li key={doc.name}>
                                     <a 
