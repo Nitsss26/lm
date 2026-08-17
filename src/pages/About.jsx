@@ -13,6 +13,7 @@ const About = () => {
     ]
 
     const documents = [
+        { title: 'Mandatory Disclosure Details (SARAS)', file: 'Mandatory Disclosure Details SARAS.pdf' },
         { title: 'Academic Calendar 2026-27', file: 'Academic Calendar.pdf' },
         { title: 'CBSE Affiliation Letter', file: 'Affiliation.pdf' },
         { title: 'School Curriculum', file: 'Curriculum.pdf' },

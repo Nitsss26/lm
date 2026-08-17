@@ -58,6 +58,7 @@ const Footer = () => {
                         <h4 className="text-white font-bold mb-6">Mandatory Disclosure</h4>
                         <ul className="space-y-3">
                             {[
+                                { name: 'Mandatory Disclosure Details', file: 'Mandatory Disclosure Details SARAS.pdf' },
                                 { name: 'Fee Structure', file: 'Fee Structure.pdf' },
                                 { name: 'Academic Calendar', file: 'Academic Calendar.pdf' },
                                 { name: 'CBSE Affiliation', file: 'Affiliation.pdf' },
